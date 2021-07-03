@@ -1,0 +1,32 @@
+frontend{
+
+
+}
+
+backend{
+    npm init -y
+    npm install --save-dev nodemon
+    npm i --g express body-parser concurrently
+}
+
+////////////////data fetch//////////////////
+function Tweet() {
+   useEffect( ()=>{
+       fetchItems();
+
+   },[]);
+
+   const [items,setItems] = useState([]);
+   const fetchItems = async()=>{
+      const data = await fetch('/tweets');
+      const items = await data.json();
+      setItems[items];
+   };
+
+   return(
+
+   );
+}
+
+
+/////////////////
